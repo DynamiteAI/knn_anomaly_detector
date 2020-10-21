@@ -1,0 +1,23 @@
+{
+  "package_name": "knn_anomaly_detector",
+  "module_name": "main",
+  "class_name": "KNNAnomalyDetectorAnalyzer",
+  "inputs": {
+    "kafka": {
+      "topic": "zeek-raw-conn",
+      "brokers": ["localhost:9092"]
+    }
+  },
+  "output":{
+      "elasticsearch": {
+        "targets": ["localhost:9200"],
+        "username": null,
+        "password": null,
+        "use_ssl": false,
+        "index": "knn_anomaly_detector"
+      },
+      "file": {
+        "path": "~/knn_anomaly_output.ndjson"
+      }
+  }
+}
