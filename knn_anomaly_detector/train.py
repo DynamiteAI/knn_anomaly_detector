@@ -37,6 +37,6 @@ def train_knn_anomaly_detector(input_df: pandas.DataFrame, domain: str, train_fi
 
     makedirs(model_directory)
 
-    model = KNN(contamination=contamination, n_neighbors=n_neighbors)
+    model = KNN(contamination=contamination, n_neighbors=n_neighbors, metric='manhattan')
 
     joblib.dump(model.fit(train_df), model_pkl_file)
