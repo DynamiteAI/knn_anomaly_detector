@@ -57,4 +57,4 @@ Each object then "votes" for their class and the class with the most votes is ta
 ## Lessons Learned
 - Limit the dimensionality of your data, kNN can be very computationally expensive during the testing (prediction) phase. kNN performed significantly slower when additional features were introduced.
 - Choose your features wisely. The algorithm is only as good as the data we "train" it on. We intentionally chose features that describe an application protocols "behaviors".
-- By itself, missed several events, that based on our criteria were anomalous. For best results this algorithm should be used alongside other anomaly detectors which can help cut down on false-positives/true-positives.
+- This algorithm missed several events that, based on our criteria, were anomalous. For best results this algorithm should be used alongside other anomaly detectors which can help cut down on false-positives and false negatives.
